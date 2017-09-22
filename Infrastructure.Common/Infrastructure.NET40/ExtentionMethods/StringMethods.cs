@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Harmony.Infrastructure.ExtentionMethods
+namespace Harmony.Infrastructure.Common.ExtentionMethods
 {
 	/// <summary>
 	/// Contains extention method for string's value
@@ -31,17 +31,6 @@ namespace Harmony.Infrastructure.ExtentionMethods
 		}
 
 		/// <summary>
-		/// Throw exception (ArgumentException) if argument is equals null or Empty.
-		/// </summary>
-		/// <param name="value">The argument to test.</param>
-		public static string ThrowIfArgumentIsNullOrEmpty(this string value)
-		{
-			if (String.IsNullOrEmpty(value))
-				throw new ArgumentException(String.Format("Argument [{0}] is empty", value));
-			return value;
-		}
-
-		/// <summary>
 		/// Throw exception (InvalidOperationException) is value equals null or Empty.
 		/// </summary>
 		/// <param name="value">The string to test.</param>
@@ -50,6 +39,17 @@ namespace Harmony.Infrastructure.ExtentionMethods
 		{
 			if (String.IsNullOrEmpty(value))
 				throw new InvalidOperationException(errorMessage);
+			return value;
+		}
+
+		/// <summary>
+		/// Throw exception (ArgumentException) if argument is equals null or Empty.
+		/// </summary>
+		/// <param name="value">The argument to test.</param>
+		public static string ThrowIfArgumentIsNullOrEmpty(this string value)
+		{
+			if (String.IsNullOrEmpty(value))
+				throw new ArgumentException(String.Format("Argument [{0}] is empty", value));
 			return value;
 		}
 	}
