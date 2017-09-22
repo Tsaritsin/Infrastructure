@@ -46,10 +46,11 @@ namespace Harmony.Infrastructure.Common.ExtentionMethods
 		/// Throw exception (ArgumentException) if argument is equals null or Empty.
 		/// </summary>
 		/// <param name="value">The argument to test.</param>
-		public static string ThrowIfArgumentIsNullOrEmpty(this string value)
+		/// <param name="argumentName">Name of argument to test.</param>
+		public static string ThrowIfArgumentIsNullOrEmpty(this string value, string argumentName)
 		{
 			if (String.IsNullOrEmpty(value))
-				throw new ArgumentException(String.Format("Argument [{0}] is empty", value));
+				throw new ArgumentNullException($"Argument [{argumentName}] is empty");
 			return value;
 		}
 	}

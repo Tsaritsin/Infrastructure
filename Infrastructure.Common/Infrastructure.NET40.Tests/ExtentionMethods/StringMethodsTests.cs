@@ -87,5 +87,37 @@ namespace Infrastructure.NET40.Tests.ExtentionMethods
 
 			#endregion
 		}
+
+		[TestCase("", true, TestName = "ValueIsEmptyString")]
+		[TestCase("TestValue", false, TestName = "ValueIsSampleString")]
+		[TestCase(null, true, TestName = "ValueIsNull")]
+		[TestCase("\n", false, TestName = "ValueIsNewLine")]
+		public void ThrowIfArgumentIsNullOrEmpty_Cases(string value, bool exceptionIsExpected)
+		{
+			#region Arrange
+
+			const string argumentName = "Argument1";
+
+			TestDelegate actionForTest = delegate
+			{
+				value.ThrowIfArgumentIsNullOrEmpty(argumentName);
+			};
+
+			#endregion
+
+			#region Assert
+
+			if (exceptionIsExpected)
+			{
+				var actualExeption = Assert.Throws<ArgumentNullException>(actionForTest);
+
+				StringAssert.Contains(argumentName, actualExeption.Message);
+			}
+			else
+				Assert.DoesNotThrow(actionForTest);
+
+			#endregion
+		}
+
 	}
 }
