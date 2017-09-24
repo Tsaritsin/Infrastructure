@@ -2,7 +2,7 @@
 using Harmony.Infrastructure.Common.ExtentionMethods;
 using NUnit.Framework;
 
-namespace Infrastructure.NET40.Tests.ExtentionMethods
+namespace Infrastructure.Common.NET40.Tests.ExtentionMethods
 {
 	[TestFixture]
 	public class StringMethodsTests
