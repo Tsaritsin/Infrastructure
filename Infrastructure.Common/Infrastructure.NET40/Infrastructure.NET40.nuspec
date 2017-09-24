@@ -10,7 +10,7 @@
     <description>Infrastructure for programming on C#.</description>
   </metadata>
 	<files>
-		<file src="lib\net40\Infrastructure.Common.dll" target="lib\net40\Infrastructure.Common.dll" />
-		<file src="lib\sl5\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
+		<file src=".\bin\Release\Infrastructure.Common.dll" target="lib\net40\Infrastructure.Common.dll" />
+		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
 	</files>
 </package>
