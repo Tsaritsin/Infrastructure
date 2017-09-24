@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<!-- It spec for packing on AppVeyor -->
+<!-- This spec will find automaticaly -->
 <package >
   <metadata>
     <id>Harmony.Infrastructure.Common</id>
@@ -10,7 +12,7 @@
     <description>Infrastructure for programming on C#.</description>
   </metadata>
 	<files>
-		<file src=".\bin\Release\Infrastructure.Common.dll" target="lib\net40\Infrastructure.Common.dll" />
+		<!-- Additional files (assembly for NET40 will added automaticaly) -->
 		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
 	</files>
 </package>
