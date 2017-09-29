@@ -9,10 +9,12 @@
     <authors>Tsaritsin S.S.</authors>
     <projectUrl>http://github.com/Tsaritsin/Infrastructure</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Infrastructure for programming on C#.</description>
+    <description>Infrastructure for programming on C#.
+		Target platforms: Net40, SL5</description>
   </metadata>
 	<files>
 		<!-- Additional files (assembly for NET40 will added automaticaly) -->
 		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
 	</files>
+	<tags>NET Helper</tags>
 </package>
