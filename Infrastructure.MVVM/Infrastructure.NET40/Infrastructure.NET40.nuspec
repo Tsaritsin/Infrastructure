@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- It spec for packing on AppVeyor -->
+<!-- This spec will find automaticaly -->
+<package >
+  <metadata>
+    <id>Harmony.Infrastructure.MVVM</id>
+    <version>$version$</version>
+    <title>Harmony Infrastructure MVVM</title>
+    <authors>Tsaritsin S.S.</authors>
+    <projectUrl>http://github.com/Tsaritsin/Infrastructure</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Infrastructure for programming on C#.
+		Target platforms: Net40, SL5</description>
+	  <tags>NET Helper</tags>
+  </metadata>
+	<files>
+		<!-- Additional files (assembly for NET40 will added automaticaly) -->
+		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.MVVM.dll" target="lib\sl5\Infrastructure.MVVM.dll" />
+	</files>
+</package>

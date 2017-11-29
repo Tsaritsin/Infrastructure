@@ -3,27 +3,71 @@ using System.Windows.Input;
 
 namespace Harmony.Infrastructure.MVVM
 {
+	/// <summary>
+	/// It is implementation of interface <see cref="ICommand"/> />.
+	/// </summary>
 	public class DelegateCommand : ICommand
 	{
 		#region Fields
 
-		
+		private readonly Action<object> _executeMethod;
+		private readonly Predicate<object> _canExecuteMethod;
 
 		#endregion
 
+		/// <summary>
+		/// Creates a new instance of <see cref="DelegateCommand"/>
+		/// </summary>
+		/// <param name="executeMethod">Invoke when <see cref="ICommand.Execute"/> is called.</param>
+		/// <param name="canExecuteMethod">Invoke when <see cref="ICommand.CanExecute"/> is called</param>
+		public DelegateCommand(Action<object> executeMethod, Predicate<object> canExecuteMethod)
+		{
+			if (executeMethod == null)
+				throw new ArgumentNullException(nameof(executeMethod));
+			_executeMethod = executeMethod;
+
+			if (canExecuteMethod == null)
+				throw new ArgumentNullException(nameof(canExecuteMethod));
+			_canExecuteMethod = canExecuteMethod;
+		}
+
 		#region Implementation ICommand
+
+		#region Events
+
+		#region CanExecuteChanged
 
 		public event EventHandler CanExecuteChanged;
 
-		public bool CanExecute(object parameter)
+		public void OnCanExecuteChanged()
 		{
-			throw new NotImplementedException();
+			CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 		}
 
+		#endregion
+
+		#endregion
+
+		#region Methods
+
+		/// <summary>
+		/// Determines if the command can be executed.
+		/// </summary>
+		/// <returns>Returns <see langword="true"/> if the command can execute,otherwise returns <see langword="false"/>.</returns>
+		public bool CanExecute(object parameter)
+		{
+			return _canExecuteMethod(parameter);
+		}
+
+		///<summary>
+		/// Executes the command.
+		///</summary>
 		public void Execute(object parameter)
 		{
-			throw new NotImplementedException();
+			_executeMethod(parameter);
 		}
+
+		#endregion
 
 		#endregion
 	}
