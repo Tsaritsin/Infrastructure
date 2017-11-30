@@ -57,6 +57,9 @@
     <Compile Include="..\Infrastructure.NET40\DelegateCommand.cs">
       <Link>DelegateCommand.cs</Link>
     </Compile>
+    <Compile Include="..\Infrastructure.NET40\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
