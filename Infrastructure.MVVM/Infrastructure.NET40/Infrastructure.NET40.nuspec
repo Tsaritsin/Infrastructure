@@ -3,9 +3,9 @@
 <!-- This spec will find automaticaly -->
 <package >
   <metadata>
-    <id>Harmony.Infrastructure.Common</id>
+    <id>Harmony.Infrastructure.MVVM</id>
     <version>$version$</version>
-    <title>Harmony Infrastructure Common</title>
+    <title>Harmony Infrastructure MVVM</title>
     <authors>Tsaritsin S.S.</authors>
     <projectUrl>http://github.com/Tsaritsin/Infrastructure</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -15,6 +15,6 @@
   </metadata>
 	<files>
 		<!-- Additional files (assembly for NET40 will added automaticaly) -->
-		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
+		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.MVVM.dll" target="lib\sl5\Infrastructure.MVVM.dll" />
 	</files>
 </package>
