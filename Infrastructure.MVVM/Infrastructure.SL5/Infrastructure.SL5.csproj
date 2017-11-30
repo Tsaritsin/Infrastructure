@@ -46,6 +46,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Infrastructure.Common, Version=1.0.60.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Harmony.Infrastructure.Common.1.0.60\lib\sl5\Infrastructure.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -57,10 +61,16 @@
     <Compile Include="..\Infrastructure.NET40\DelegateCommand.cs">
       <Link>DelegateCommand.cs</Link>
     </Compile>
+    <Compile Include="..\Infrastructure.NET40\DependencyFromPropertyAttribute.cs">
+      <Link>DependencyFromPropertyAttribute.cs</Link>
+    </Compile>
     <Compile Include="..\Infrastructure.NET40\ViewModelBase.cs">
       <Link>ViewModelBase.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
