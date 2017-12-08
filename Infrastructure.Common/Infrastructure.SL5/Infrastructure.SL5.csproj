@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Infrastructure.NET40\ExtentionMethods\ObjectMethods.cs">
+      <Link>ExtentionMethods\ObjectMethods.cs</Link>
+    </Compile>
     <Compile Include="..\Infrastructure.NET40\ExtentionMethods\StringMethods.cs">
       <Link>ExtentionMethods\StringMethods.cs</Link>
     </Compile>
