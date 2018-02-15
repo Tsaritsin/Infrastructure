@@ -68,5 +68,32 @@ namespace Infrastructure.Common.NET40.Tests.ExtentionMethods
 			#endregion
 		}
 
+		[TestCase(null, "TestErrorMessage1", true, TestName = "ValueIsEmptyStringWaitException")]
+		[TestCase("TestValue", "TestErrorMessage2", false, TestName = "WithoutException")]
+		public void SomeValue_CallThrowIfIsNull_GetNullReferenceException(
+			object value, string errorMessage, bool expectException)
+		{
+			#region Arrange
+			
+			TestDelegate actionForTest = delegate
+			{
+				value.ThrowIfIsNull(errorMessage);
+			};
+
+			#endregion
+
+			#region Assert
+
+			if (!expectException)
+				Assert.DoesNotThrow(actionForTest);
+			else
+			{
+				var actualExeption = Assert.Throws<NullReferenceException>(actionForTest);
+				Assert.That(actualExeption.Message, Is.EqualTo(errorMessage));
+			}
+
+			#endregion
+		}
+
 	}
 }

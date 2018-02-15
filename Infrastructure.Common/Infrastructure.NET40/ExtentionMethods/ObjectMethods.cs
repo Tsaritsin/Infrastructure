@@ -8,7 +8,7 @@ namespace Harmony.Infrastructure.Common.ExtentionMethods
 	public static class ObjectMethods
 	{
 		/// <summary>
-		/// Throw exception is value equals null.
+		/// Throw exception if value equals null.
 		/// </summary>
 		/// <param name="value">The object to test.</param>
 		/// <param name="exception">The exception to throw.</param>
@@ -16,6 +16,22 @@ namespace Harmony.Infrastructure.Common.ExtentionMethods
 		{
 			if (value == null)
 				throw exception;
+			return value;
+		}
+
+		/// <summary>
+		/// Throw NullReferenceException if value equals null.
+		/// </summary>
+		/// <param name="value">The object to test.</param>
+		/// <param name="exceptionMessage">The message of NullReferenceException for throw.</param>
+		public static T ThrowIfIsNull<T>(this T value, string exceptionMessage)
+		{
+			if (String.IsNullOrEmpty(exceptionMessage))
+				throw new ArgumentNullException(nameof(exceptionMessage));
+
+			if (value == null)
+				throw new NullReferenceException(exceptionMessage);
+
 			return value;
 		}
 
