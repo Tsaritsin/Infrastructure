@@ -58,6 +58,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Infrastructure.NET40\BindableViewModel.cs">
+      <Link>BindableViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\Infrastructure.NET40\DelegateCommand.cs">
       <Link>DelegateCommand.cs</Link>
     </Compile>
