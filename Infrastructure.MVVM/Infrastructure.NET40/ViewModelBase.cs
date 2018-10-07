@@ -5,7 +5,7 @@ using Harmony.Infrastructure.Common.ExtentionMethods;
 
 namespace Harmony.Infrastructure.MVVM
 {
-	public abstract class ViewModelBase: INotifyPropertyChanged
+	public abstract class ViewModelBase: INotifyPropertyChanged, INotifyPropertyChanging
 	{
 		#region Fields
 
@@ -37,7 +37,7 @@ namespace Harmony.Infrastructure.MVVM
 			
 			if (EqualityComparer<T>.Default.Equals(newValue, GetPropertyValue<T>(propertyName)))
 				return false;
-
+			OnPropertyChanging(propertyName);
 			_propertyValues[propertyName] = newValue;
 			OnPropertyChanged(propertyName);
 			return true;
@@ -79,6 +79,17 @@ namespace Harmony.Infrastructure.MVVM
 			// Raice of event PropertyChanged for all properties, which marked of DependencyFromPropertyAttribute
 			foreach (var dependentPropertyName in dependentProperties[propertyName])
 				OnPropertyChanged(dependentPropertyName);
+		}
+
+		#endregion
+
+		#region Implementation INotifyPropertyChanging
+
+		public event PropertyChangingEventHandler PropertyChanging;
+
+		protected void OnPropertyChanging(string propertyName)
+		{
+			PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
 		}
 
 		#endregion
