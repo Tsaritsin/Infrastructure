@@ -46,8 +46,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Infrastructure.Common, Version=1.0.70.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Harmony.Infrastructure.Common.1.0.70\lib\sl5\Infrastructure.Common.dll</HintPath>
+    <Reference Include="Infrastructure.Common, Version=1.0.60.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Harmony.Infrastructure.Common.1.0.60\lib\sl5\Infrastructure.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
