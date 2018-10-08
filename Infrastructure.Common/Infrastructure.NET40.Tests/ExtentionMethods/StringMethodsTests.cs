@@ -26,6 +26,44 @@ namespace Infrastructure.Common.NET40.Tests.ExtentionMethods
 			#endregion
 		}
 
+		[TestCase("", false, TestName = "ValueIsEmptyString")]
+		[TestCase("TestValue", true, TestName = "ValueIsSampleString")]
+		[TestCase(null, false, TestName = "ValueIsNull")]
+		[TestCase("\n", true, TestName = "ValueIsNewLine")]
+		public void HasValue_Cases(string value, bool expectedResult)
+		{
+			#region Act
+
+			var actualResult = value.HasValue();
+
+			#endregion
+
+			#region Assert
+
+			Assert.That(actualResult, Is.EqualTo(expectedResult));
+
+			#endregion
+		}
+
+		[TestCase("", "n1", "n1", TestName = "ValueIsEmptyString")]
+		[TestCase("TestValue", "n2", "TestValue", TestName = "ValueIsSampleString")]
+		[TestCase(null, "n3", "n3", TestName = "ValueIsNull")]
+		[TestCase("\n", "n4", "\n", TestName = "ValueIsNewLine")]
+		public void SetValueIfIsNullOrEmpty_Cases(string value, string newValue, string expectedResult)
+		{
+			#region Act
+
+			var actualResult = value.SetValueIfIsNullOrEmpty(newValue);
+
+			#endregion
+
+			#region Assert
+
+			Assert.That(actualResult, Is.EqualTo(expectedResult));
+
+			#endregion
+		}
+
 		[TestCase("", "TestErrorMessage1", true, TestName = "ValueIsEmptyString")]
 		[TestCase("TestValue", null, false, TestName = "ValueIsSampleString")]
 		[TestCase(null, "TestErrorMessage2", true, TestName = "ValueIsNull")]
