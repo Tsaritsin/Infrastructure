@@ -15,6 +15,5 @@
   </metadata>
 	<files>
 		<!-- Additional files (assembly for NET40 will added automaticaly) -->
-		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.MVVM.dll" target="lib\sl5\Infrastructure.MVVM.dll" />
 	</files>
 </package>
