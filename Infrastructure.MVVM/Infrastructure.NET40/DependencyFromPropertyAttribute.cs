@@ -1,5 +1,4 @@
 ﻿using System;
-using Harmony.Infrastructure.Common.ExtentionMethods;
 
 namespace Harmony.Infrastructure.MVVM
 {
@@ -7,7 +6,9 @@ namespace Harmony.Infrastructure.MVVM
 	{
 		public DependencyFromPropertyAttribute(string propertyName)
 		{
-			PropertyName = propertyName.ThrowIfArgumentIsNullOrEmpty(nameof(propertyName));
+			if (String.IsNullOrEmpty(propertyName))
+				throw new ArgumentNullException(nameof(propertyName));
+			PropertyName = propertyName;
 		}
 
 		public string PropertyName { get; }

@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Infrastructure.Common, Version=1.0.72.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Harmony.Infrastructure.Common.1.0.72\lib\net40\Infrastructure.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,9 +40,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BindableViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Harmony.Infrastructure.Common.ExtentionMethods;
 
 namespace Harmony.Infrastructure.MVVM
 {
@@ -29,7 +29,8 @@ namespace Harmony.Infrastructure.MVVM
 		/// <returns></returns>
 		protected T GetPropertyValue<T>(string propertyName)
 		{
-			propertyName.ThrowIfArgumentIsNullOrEmpty(nameof(propertyName));
+			if(String.IsNullOrEmpty(propertyName))
+				throw new ArgumentNullException(nameof(propertyName));
 
 			object value;
 			if (_propertyValues.TryGetValue(propertyName, out value))
@@ -46,8 +47,9 @@ namespace Harmony.Infrastructure.MVVM
 		/// <returns></returns>
 		protected bool SetPropertyValue<T>(T newValue, string propertyName)
 		{
-			propertyName.ThrowIfArgumentIsNullOrEmpty(nameof(propertyName));
-			
+			if (String.IsNullOrEmpty(propertyName))
+				throw new ArgumentNullException(nameof(propertyName));
+
 			if (EqualityComparer<T>.Default.Equals(newValue, GetPropertyValue<T>(propertyName)))
 				return false;
 			OnPropertyChanging(propertyName);
