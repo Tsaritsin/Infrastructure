@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Harmony.Infrastructure.Common.ExtentionMethods
+namespace Harmony.Infrastructure.Common.ExtenstionMethods
 {
 	/// <summary>
-	/// Contains extention method for object's value
+	/// Contains extenstion method for object's value
 	/// </summary>
 	public static class ObjectMethods
 	{
@@ -43,7 +43,7 @@ namespace Harmony.Infrastructure.Common.ExtentionMethods
 		public static T ThrowIfArgumentIsNull<T>(this T value, string argumentName)
 		{
 			if (value == null)
-				throw new ArgumentNullException($"Argument [{argumentName}] is null");
+				throw new ArgumentNullException(argumentName, $"Argument [{argumentName}] is null");
 			return value;
 		}
 	}

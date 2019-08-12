@@ -10,11 +10,11 @@
     <projectUrl>http://github.com/Tsaritsin/Infrastructure</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Infrastructure for programming on C#.
-		Target platforms: Net40, SL5</description>
+		Target platforms: Net40, NetStandard20</description>
 	  <tags>NET Helper</tags>
   </metadata>
 	<files>
 		<!-- Additional files (assembly for NET40 will added automaticaly) -->
-		<file src="..\Infrastructure.SL5\bin\Release\Infrastructure.Common.dll" target="lib\sl5\Infrastructure.Common.dll" />
+		<file src="..\Infrastructure.NETSTANDARD20\bin\Release\netstandard2.0\Infrastructure.Common.dll" target="lib\netstandard20\Infrastructure.Common.dll" />
 	</files>
 </package>

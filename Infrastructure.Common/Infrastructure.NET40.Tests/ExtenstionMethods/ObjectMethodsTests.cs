@@ -1,8 +1,8 @@
 ﻿using System;
-using Harmony.Infrastructure.Common.ExtentionMethods;
+using Harmony.Infrastructure.Common.ExtenstionMethods;
 using NUnit.Framework;
 
-namespace Infrastructure.Common.NET40.Tests.ExtentionMethods
+namespace Infrastructure.Common.NET40.Tests.ExtenstionMethods
 {
 	[TestFixture]
 	public class ObjectMethodsTests

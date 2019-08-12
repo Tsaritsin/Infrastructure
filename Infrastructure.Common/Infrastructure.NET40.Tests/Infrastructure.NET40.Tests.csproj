@@ -37,8 +37,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtentionMethods\ObjectMethodsTests.cs" />
-    <Compile Include="ExtentionMethods\StringMethodsTests.cs" />
+    <Compile Include="ExtenstionMethods\ObjectMethodsTests.cs" />
+    <Compile Include="ExtenstionMethods\StringMethodsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

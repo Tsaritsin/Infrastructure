@@ -34,8 +34,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtentionMethods\ObjectMethods.cs" />
-    <Compile Include="ExtentionMethods\StringMethods.cs" />
+    <Compile Include="ExtenstionMethods\ObjectMethods.cs" />
+    <Compile Include="ExtenstionMethods\StringMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

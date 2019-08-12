@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Harmony.Infrastructure.Common.ExtentionMethods
+namespace Harmony.Infrastructure.Common.ExtenstionMethods
 {
 	/// <summary>
-	/// Contains extention method for string's value
+	/// Contains extenstion method for string's value
 	/// </summary>
 	public static class StringMethods
 	{
@@ -74,7 +74,7 @@ namespace Harmony.Infrastructure.Common.ExtentionMethods
 		public static string ThrowIfArgumentIsNullOrEmpty(this string value, string argumentName)
 		{
 			if (String.IsNullOrEmpty(value))
-				throw new ArgumentNullException($"Argument [{argumentName}] is empty");
+				throw new ArgumentNullException(argumentName, $"Argument [{argumentName}] is empty");
 			return value;
 		}
 	}
