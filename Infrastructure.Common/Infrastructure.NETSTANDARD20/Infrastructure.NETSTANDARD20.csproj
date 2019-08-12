@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Harmony.Infrastructure.Common</RootNamespace>
     <AssemblyName>Infrastructure.Common</AssemblyName>
+	  <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
