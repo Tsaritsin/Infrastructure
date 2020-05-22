@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Harmony.Infrastructure.Common</RootNamespace>
     <AssemblyName>Infrastructure.Common</AssemblyName>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
