@@ -5,6 +5,7 @@
     <RootNamespace>Harmony.Infrastructure.Common</RootNamespace>
     <AssemblyName>Infrastructure.Common</AssemblyName>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>Harmony.Infrastructure.netcoreapp3.1</PackageId>
   </PropertyGroup>
 
 </Project>
