@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Harmony.Infrastructure.MVVM</RootNamespace>
     <AssemblyName>Infrastructure.MVVM</AssemblyName>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
